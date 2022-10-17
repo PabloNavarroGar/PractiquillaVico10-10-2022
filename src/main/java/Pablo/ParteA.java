@@ -55,7 +55,7 @@ public class ParteA {
         numeroReparacionesDelDia = teclado.nextInt();
         //Salida de datos de system out monstando el numero de 
         //reparaciones diarias
-        System.out.println(" El numero de reparaciones de este lune son "
+        System.out.println(" El numero de reparaciones de este lunes son "
                 + numeroReparacionesDelDia);
 
         //Formula de calculo del dia 
@@ -76,7 +76,7 @@ public class ParteA {
                 + numeroReparacionesDelDia);
 
         //Formula de calculo del dia 
-        reparacionesMartes = (float) (REPARACIONES *numeroReparacionesDelDia);
+        reparacionesMartes = (float) (REPARACIONES * numeroReparacionesDelDia);
 
         //Resultado de las reparaciones del Martes
         //salgan 3 decimales despues de la coma
@@ -93,8 +93,8 @@ public class ParteA {
                 + numeroReparacionesDelDia);
 
         //Formula de calculo del dia a dia 
-        reparacionesMiercoles = (float) (REPARACIONES *
-                numeroReparacionesDelDia);
+        reparacionesMiercoles = (float) (REPARACIONES
+                * numeroReparacionesDelDia);
 
         //Resultado de las reparaciones del Lunes
         //Que salga 3 deciamales
@@ -107,8 +107,8 @@ public class ParteA {
         //Poner el escaler que sea un Int
         numeroReparacionesDelDia = teclado.nextInt();
         //Salida de datos de system out
-        System.out.println(" El numero de reparaciones de este Jueves son " +
-                numeroReparacionesDelDia);
+        System.out.println(" El numero de reparaciones de este Jueves son "
+                + numeroReparacionesDelDia);
 
         //Formula de calculo del dia a dia 
         reparacionesJueves = (float) (REPARACIONES * numeroReparacionesDelDia);
@@ -123,13 +123,13 @@ public class ParteA {
         //Poner el escaler que sea un Int
         numeroReparacionesDelDia = teclado.nextInt();
         //Salida de datos de system out
-        System.out.println(" El numero de reparaciones de este Viernes son " +
-                numeroReparacionesDelDia);
+        System.out.println(" El numero de reparaciones de este Viernes son "
+                + numeroReparacionesDelDia);
 
         //Formula de calculo del dia a dia 
         reparacionesViernes = (float) (REPARACIONES * numeroReparacionesDelDia);
 
-        //Resultado de las reparaciones del Lunes
+        //Resultado de las reparaciones del Viernes
         System.out.printf(" %.3f " + "€", reparacionesViernes);
 
         //RecuentoTotal de la semana
@@ -141,9 +141,26 @@ public class ParteA {
                 + reparacionesJueves
                 + reparacionesViernes;
         //Salida de datos de la semana
-        
-        System.out.printf(" Esta semana hemos ganado " + " %.3f" + "€", 
+
+        String resultado = """
+                          En PCROTO hemos ganado esta semana
+                          ----------------------------------
+                          Lunes :----%.3f€
+                          Martes:----%.3f€
+                          Miercoles:-%.3f€
+                          Juevees:---%.3f€
+                          Viernes:---%.3f€
+                          En total hemos ganado esta semana:-%.3f€
+                          
+                                    
+                          """.formatted(reparacionesLunes,
+                reparacionesMartes,
+                reparacionesMiercoles,
+                reparacionesJueves,
+                reparacionesViernes,
                 reparacionesTotalSemana);
+
+        System.out.println(resultado);
     }
 
 }

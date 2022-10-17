@@ -192,13 +192,25 @@ public class ParteB {
 
         String resultadoSemana = """
                                 En Pcroto,
-                                Esta semana hemos ganado %.1f
+                                Este Lunes hemos ganado:------%.1f€  
+                                Este Martes hemos ganado:---- %.1f€
+                                Este Miercoles hemos ganado:- %.1f€
+                                Este Jueves hemos ganado:-----%.1f€
+                                Este Viernes hemos ganado:----%.1f€
+                                Esta semana hemos ganado:-----%.1f€
+                                 
+                                 
                                
                                 
-                                .
-                                """.formatted(reparacionesTotalSemana);
+                                
+                                """.formatted(gananciasLunes,
+                                        gananciasMartes,
+                                        gananciasMiercoles,
+                                        gananciasJueves,
+                                        gananciasViernes,
+                                        reparacionesTotalSemana);
 
-        JOptionPane.showMessageDialog(null, resultadoSemana + "€");
+        JOptionPane.showMessageDialog(null, resultadoSemana);
 
         //Declaracion Variable para saber si se
         //superan los 1000 euros semanables como objetivo
